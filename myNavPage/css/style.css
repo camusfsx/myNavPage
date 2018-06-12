@@ -1,0 +1,162 @@
+body{
+    display: grid;
+    grid-template-rows: 50vh 320px 1fr;
+    grid-template-columns: 1fr 960px 1fr;
+    background: url('../image/background-img.png') no-repeat;
+    background-size: cover;
+}
+main{
+    grid-row:2/3;
+    grid-column: 2/3;  
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 50px;
+}
+main .keyBox{
+    display: grid;
+    grid-template-rows: 5fr 5fr 5fr 1fr;
+}
+main .keyBox .row{
+    margin:auto;
+}
+main .keyBox .key{
+    display: block;
+    float: left;
+    box-sizing: content-box;
+    width: 78px;
+    height: 78px;
+    border: 3px solid silver;
+    box-shadow: 0px 6px 2px 2px gray;
+    margin: 6px;
+    padding: 0;
+    color: teal;
+    background-color:#eaecd9;
+    border-radius: 50%;
+    text-align: center; 
+    font-size:40px;
+    line-height:40px;
+    font-weight: bold;
+    position: relative;
+}
+main .key .editButton{
+    display: none;
+    font-size: 18px;
+    color: teal;
+    border-radius: 10px;
+}
+main .key .icon{
+    widows: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+main .key:hover{
+    cursor: pointer;
+    border:42px solid silver;
+    padding: 0;
+    width:0px;
+    height:0px;
+    color: silver;
+    transition: all 500ms;
+}
+main .key:hover .icon{
+    display: none;
+}
+main .key:hover .editButton{
+    display: block;
+    position: absolute;
+    left:-10px;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.hid{
+    display: none;
+}
+@media(max-width:1440px){
+    body{
+        grid-template-rows: 50vh 160px 1fr;
+        grid-template-columns: 1fr 480px 1fr;
+    }
+    main{
+        border-radius: 20px;
+    }
+    main .keyBox .key{
+        width: 38px;
+        height: 38px;
+        border: 2px solid silver;
+        box-shadow: 0px 3px 1px 1px gray;
+        margin: 3px; 
+        font-size:20px;
+        line-height:20px;
+    }
+    main .key .editButton{
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    main .key .icon{
+        width: 15px;
+        height: 15px;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    main .key:hover{
+        cursor: pointer;
+        border:21px solid silver;
+        padding: 0;
+        width:0px;
+        height:0px;
+        color: silver;
+        transition: all 500ms;
+    }
+    main .key:hover .editButton{
+        left:-5px;
+    }
+}
+@media(max-width:720px){
+    body{
+        grid-template-rows: 1fr 480px 1fr;
+        grid-template-columns: 1fr 160px 1fr;
+    }
+    main{
+        border-radius: 20px;
+    }
+    main .keyBox{
+        display: grid;
+        grid-template-columns: 5fr 5fr 5fr 1fr;
+    }
+    main .keyBox .key{
+        width: 38px;
+        height: 38px;
+        border: 2px solid silver;
+        box-shadow: 0px 3px 1px 1px gray;
+        margin: 3px; 
+        font-size:20px;
+        line-height:20px;
+    }
+    main .key .editButton{
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    main .key .icon{
+        width: 15px;
+        height: 15px;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    main .key:hover{
+        cursor: pointer;
+        border:21px solid silver;
+        padding: 0;
+        width:0px;
+        height:0px;
+        color: silver;
+        transition: all 500ms;
+    }
+    main .key:hover .editButton{
+        left:-5px;
+    }
+}

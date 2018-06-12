@@ -1,0 +1,78 @@
+body{
+    display: grid;
+    grid-template-rows: 500px 320px 1fr;
+    grid-template-columns: 1fr 1100px 1fr;
+    background-image: url('../image/background-img.png')
+}
+main{
+    grid-row:2/3;
+    grid-column: 2/3;  
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 50px;
+}
+footer{
+    grid-row:3/4;
+    grid-column: 2/3;  
+}
+main .keyBox{
+    display: grid;
+    grid-template-rows: 100px 100px 100px 1fr;
+}
+main .keyBox .row{
+    margin:auto;
+}
+main .keyBox .key{
+    display: block;
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 3px solid silver;
+    box-shadow: 0px 6px 2px 2px gray;
+    margin: 5px;
+    color: teal;
+    background-color:#eaecd9;
+    border-radius: 50%;
+    text-align: center; 
+    font-size:40px;
+    line-height:40px;
+    font-weight: bold;
+    position: relative;
+}
+main .key .editButton{
+    display: none;
+}
+main .key .icon{
+    widows: 20px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+main .key:hover{
+    cursor: pointer;
+    width:0px;
+    height:0px;
+    border:43px solid silver;
+    color: silver;
+    transition: all 500ms;
+}
+main .key:hover .icon{
+    display: none;
+}
+main .key:hover .editButton{
+    display: block;
+    position: absolute;
+    left:-10px;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+footer input{
+    display: block;
+    margin:0 auto;
+}
+.hid{
+    display: none;
+}
